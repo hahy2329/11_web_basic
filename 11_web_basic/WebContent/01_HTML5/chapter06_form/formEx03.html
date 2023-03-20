@@ -222,6 +222,21 @@
 		- form의 메서드 전송방식이 반드시 post이어야 하며  enctype="multipart/form-data" 속성을 반드시 지정해야 한다.
 		   
 	 -->
+	 
+	 
+	  <h3>file type</h3>
+	<form method="post" enctype="multipart/form-data">
+		
+		<p>이미지 업로드1 : <input type="file" name="f1"></p>
+		<p>이미지 업로드2 : <input type="file" name="f2"></p>
+		<p>이미지 업로드3 : <input type="file" name="f3"></p>
+		<p><input type="submit"></p>
+	
+	
+	
+	</form>
+	<br><hr><br>
+	 
 
 	
 	<!-- 
@@ -234,6 +249,22 @@
 	 -->
 	
 	
+	  <h3>hidden type</h3>
+		
+	<form>	
+		<p>아이디 : <input type="text" name="id"></p>
+		<input type="hidden" name="isPC" value="true">
+		<input type="hidden" name="iTime" value="2023-03-20">
+		<input type="hidden" name="locationCd" value="100">
+		<p><input type="submit"></p>
+	
+	
+	
+	</form>
+	<br><hr><br>
+	
+	
+	
 	<!-- 
 		
 		# date 타입
@@ -243,6 +274,20 @@
 		- 익스플로어 및 특정 브라우저는 아직 지원이 되지 않는다.
 		
 	 -->
+	 
+	   <h3>date type</h3>
+		
+	<form>	
+		<p>예약일1 : <input type="date" name="date1"></p>
+		<p>예약일2 : <input type="date" name="date2" value="2023-01-01"></p>
+		<p>예약일3 : <input type="date" name="date3" min="2023-03-20" max="2023-03-27"></p>
+		<p><input type="submit"></p>
+	
+	
+	
+	</form>
+	<br><hr><br>
+	 
 
 	 
 	<!-- 
@@ -259,6 +304,23 @@
 	 	min , max : 최소값, 최대값
 	 	
 	 -->
+	 
+	 
+	 	   <h3>number type</h3>
+		
+	<form>	
+		<p>주문수량 : <input type="number" name="orderQty"></p>
+		<p>사이즈선택 : <input type="number" name="size1" value="260" step="5"></p>
+		<p>사이즈선택 : <input type="number" name="size2" value="260" min="200" max="300"></p>
+		
+		
+		<p><input type="submit"></p>
+	
+	
+	
+	</form>
+	<br><hr><br>
+	 
 			 
 	
 	<!-- 
@@ -269,6 +331,19 @@
 	    - 유효값 확인은 submit을 클릭할 경우에 진행된다.
 	 	
 	  -->
+	  
+	  	   <h3>email type</h3>
+		
+	<form>	
+		
+		<p>이메일 : <input type="email" name="email"></p>
+		<p><input type="submit"></p>
+	
+	
+	
+	</form>
+	<br><hr><br>
+	  
   
 
 </body>
