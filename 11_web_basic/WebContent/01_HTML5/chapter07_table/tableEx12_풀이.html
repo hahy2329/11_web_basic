@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연습예시</title>
+</head>
+<body>
+	<h1>2.배송지 정보</h1>
+	<form>
+		<table border="1">
+			<tr>
+				<td>배송방법</td>
+				<td><input type="radio" name="delivary">일반택배 &nbsp;
+				<input type="radio" name="delivary">편의점 택배 &nbsp;
+				<input type="radio" name="delivary">해외배송 
+				
+				</td>
+				
+			</tr>
+			<tr>
+				<td>배송지 선택</td>
+				<td><input type="radio" name="select">기본배송지 &nbsp;
+				<input type="radio" name="select">새로입력 &nbsp;
+				<input type="radio" name="select">최근배송지 
+				
+				</td>
+			</tr>
+			<tr>
+				<td>받으실 분</td>
+				<td><input type="text"></td>
+			</tr>
+			
+			<tr>
+				<td>휴대폰번호</td>
+				<td>
+					<select name="number">
+						<option value="010" selected="selected">010</option>
+						<option value="011">011</option>
+						<option value="015">015</option>
+						<option value="017">017</option>
+						<option value="019">019</option>
+					</select>-
+					<input type="text" size="10">-
+					<input type="text" size="10">
+				
+				</td>
+			</tr>
+			<tr>
+				<td>유선전화(선택)</td>
+				<td><select name="homeNumber">
+						<option value="02" selected="selected">02</option>
+						<option value="032">032</option>
+						<option value="031">031</option>
+						<option value="052">052</option>
+						<option value="051">051</option>
+				
+				
+				</select>-
+				<input type="text" size="10">
+				-
+				<input type="text" size="10">
+				</td>
+			</tr>
+			<tr>
+				<td>주소</td>
+				<td><input type="text" size="20"> &nbsp; <a href="#">우편번호검색</a><br>
+				지번 주소 : <input type="text" size="20"><br>
+				도로명 주소 : <input type="text" size="20"><br>
+				나머지 주소 : <input type="text" size="20">
+			</tr>
+			<tr>
+				<td>배송 메세지</td>
+				<td><input type="text" size="20" placeholder="택배 기사님께 전달할 메세지를 입력해주세요."></td>
+			</tr>
+				<td>선물 포장</td>
+				<td><input type="radio" name="answer"> 예 &nbsp;
+					<input type="radio" name="answer"> 아니오</td>
+			<tr>
+			
+		</table>
+	
+	</form>
+</body>
+</html>
