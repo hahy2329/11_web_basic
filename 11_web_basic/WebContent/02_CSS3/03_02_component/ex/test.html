@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+
+
+
+<body>
+	
+	<input type="button" class="btn btn-primary" value="실험용1">
+	<input type="button" class="btn btn-success" value="실험용2">
+	<input type="button" class="btn btn-warning" value="실험용3">
+	
+	<hr>
+	
+	<button type="button" class="btn btn-primary">Primary</button>
+	<button type="button" class="btn btn-secondary">Secondary</button>
+	<button type="button" class="btn btn-success">Success</button>
+	<button type="button" class="btn btn-info">Info</button>
+	<button type="button" class="btn btn-warning">Warning</button>
+	<button type="button" class="btn btn-danger">Danger</button>
+	<button type="button" class="btn btn-light">Light</button>
+	<button type="button" class="btn btn-dark">Dark</button>
+	<button type="button" class="btn btn-link">Link</button>
+	
+	<hr>
+	
+	
+	<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Column heading</th>
+      <th scope="col">Column heading</th>
+      <th scope="col">Column heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-active">
+      <th scope="row">Active</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-active">
+      <th scope="row">Default</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-active">
+      <th scope="row">Primary</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-active">
+      <th scope="row">Secondary</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-active">
+      <th scope="row">Success</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-active">
+      <th scope="row">Danger</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-active">
+      <th scope="row">Warning</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-active">
+      <th scope="row">Info</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-active">
+      <th scope="row">Light</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-active">
+      <th scope="row">Dark</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+  </tbody>
+</table>
+	
+	
+	
+	<hr>
+	
+	
+	<div class="form-group has-success">
+  <label class="form-label" for="inputValid">성공임</label>
+  <input type="text" value="correct value" class="form-control is-valid" id="inputValid">
+  <div class="valid-feedback">성공!!</div>
+</div>
+<div class="form-group has-danger">
+  <label class="form-label" for="inputInvalid">노우</label>
+  <input type="text" value="wrong value" class="form-control is-invalid" id="inputInvalid">
+  <div class="invalid-feedback">노우, 안됐어요오</div>
+</div>
+</body>
+
+<hr>
+
+
+
+
+<form>
+  <fieldset>
+    <legend>사용자정보 입력</legend>
+    <div class="form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">이메일 주소</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">비밀번호</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <label for="exampleSelect1">사용자 선택</label>
+      <select class="form-select" id="exampleSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleSelect2">사용자 다수 선택</label>
+      <select multiple="" class="form-select" id="exampleSelect2">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleTextarea">궁금한 사항</label>
+      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="formFile" class="form-label">초기화</label>
+      <input class="form-control" type="file" id="formFile">
+    </div>
+    <fieldset class="form-group">
+      <legend class="mt-4">선택 사항</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+        <label class="form-check-label" for="optionsRadios1">
+          여러분들의 선택에 맡기겠습니다.
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+        <label class="form-check-label" for="optionsRadios2">
+          여러분들이 생각하는 것은 무엇입니까?
+        </label>
+      </div>
+      <div class="form-check disabled">
+        <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
+        <label class="form-check-label" for="optionsRadios3">
+        	몰라유
+        </label>
+      </div>
+    </fieldset>
+    <fieldset class="form-group">
+      <legend>체크박스</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          초기화 체크박스
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
+        <label class="form-check-label" for="flexCheckChecked">
+          선택되어진 체크박스
+        </label>
+      </div>
+    </fieldset>
+    <fieldset class="form-group">
+      <legend class="mt-4">스위치</legend>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">초기화 스위치 버튼</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+        <label class="form-check-label" for="flexSwitchCheckChecked">선택되어진 출력 폼</label>
+      </div>
+    </fieldset>
+    <fieldset class="form-group">
+      <legend>평균</legend>
+        <label for="customRange1" class="form-label">Example range</label>
+        <input type="range" class="form-range" id="customRange1">
+        <label for="disabledRange" class="form-label">Disabled range</label>
+        <input type="range" class="form-range" id="disabledRange" disabled="">
+        <label for="customRange3" class="form-label">Example range</label>
+        <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+
+
+</html>

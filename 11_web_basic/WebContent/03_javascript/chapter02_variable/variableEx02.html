@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here(casting)</title>
+<script>
+	// 1) String(숫자) : 숫자 > 문자열 형변환 (숫자를 문자로 변환하게됨)
+		
+	var data1 = 10000;
+	
+	var parseData1 = String(data1); 
+	
+	console.log(data1, typeof data1);
+	console.log(parseData1, typeof parseData1);
+	console.log("");
+	
+	//2) Number(문자열) : 문자열 > 숫자 형변환
+	
+	var data2 = 27000;
+	var parseData2 =Number(data2);
+	
+	
+	
+	console.log(data2, typeof data2);
+	console.log(parseData2, typeof parseData2);
+	console.log("");
+	
+	
+	// 3) parsInt(실수): 실수 > 정수, 실수에 있던 소수점은 버리게 된다.
+	
+	var data3 = 10/3;
+	var parseData3 = parseInt(data3);
+	console.log(data3, typeof data3);
+	console.log(parseData3, typeof parseData3);
+	console.log("");
+	
+	
+	
+	//
+</script>
+</head>
+<body>
+	
+</body>
+</html>
