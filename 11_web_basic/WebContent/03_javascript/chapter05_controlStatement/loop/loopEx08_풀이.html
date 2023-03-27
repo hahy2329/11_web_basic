@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연습예시</title>
+<script>
+	
+
+	/*
+	 * # 최대값 구하기[2단계]
+	 * 
+	 * 1. 3회 반복을 하면서 정수를 입력받는다.
+	 * 2. 입력받은 3개의 숫자 중 가장 큰 값을 출력한다.
+	 * 
+	 */
+	 
+	 var maxNum = 0;
+	
+	for (var i = 1; i <=3; i++) {
+		var a = prompt(i+"번째 숫자를 입력해주세요 : ");
+		a = Number(a);
+		
+		if(maxNum<a){
+			maxNum = a;
+		}
+	}
+	
+	document.write("최대값은 " + maxNum+"입니다.");
+	 
+	 
+	
+</script>
+</head>
+<body>
+</body>
+</html>
