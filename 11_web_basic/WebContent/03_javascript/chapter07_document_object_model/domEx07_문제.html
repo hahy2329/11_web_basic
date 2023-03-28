@@ -3,6 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>연습예제</title>
+
+<script>
+	function answer(){
+		var grade = document.getElementById("grade").value;
+		
+		document.getElementById("choiceGradeLabel").innerHTML = "선택된 학년";
+		document.getElementById("choiceGrade").value = grade;
+		document.getElementById("choiceGrade").disabled = true;
+		
+	}
+</script>
 </head>
 <body>
 	

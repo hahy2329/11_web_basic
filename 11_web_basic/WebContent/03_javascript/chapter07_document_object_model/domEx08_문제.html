@@ -3,6 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <title>연습예제</title>
+<script>
+	function answer(){
+		var searchType = document.getElementById("searchType").value;
+		
+		var placeholder ="";
+		
+		if(searchType == "all") placeholder=""; 
+		else if(searchType == "goodsId") placeholder="상품번호를 입력하세요";
+		else if(searchType == "goodsTitle") placeholder="상품이름을 입력하세요";
+		else if(searchType == "goodsWriter") placeholder="저자를 입력하세요";
+		else if(searchType =="goodsPublisher") placeholder="출판사를 입력하세요";
+		
+		document.getElementById("searchWord").placeholder = placeholder;
+		
+	}
+</script>
 </head>
 <body>
 	
