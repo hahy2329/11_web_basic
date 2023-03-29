@@ -3,6 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title>연습예제</title>
+<script>
+	function answer(){
+		var products = document.getElementsByName("products");
+		var totalPrice =0;
+		if(products[0].checked){
+			totalPrice += Number(document.getElementById("keyboardPrice").innerHTML) 
+			* Number(document.getElementById("keyboardQty").value)
+		}
+		if(products[1].checked){
+			totalPrice += Number(document.getElementById("mousePrice").innerHTML)
+			* Number(document.getElementById("mouseQty").value)
+		}
+		if(products[2].checked){
+			totalPrice += Number(document.getElementById("padPrice").innerHTML)
+			* Number(document.getElementById("padQty").value)
+		}
+
+		document.getElementById("totalPrice").innerHTML = totalPrice;
+	}
+
+</script>
 </head>
 <body>
 
