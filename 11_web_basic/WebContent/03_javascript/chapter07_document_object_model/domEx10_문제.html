@@ -3,6 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <title>연습예제</title>
+<script>
+function answer(){
+	var inputBrowser = document.getElementById("inputBrowser").value;
+	var browser = document.getElementsByName("browser");
+
+	var isExist = false;
+
+	for(var i=0; i<browser.length; i++){
+		if(inputBrowser == browser[i].value){
+			isExist = true;
+		}
+	}
+		
+	if(!isExist){
+		alert("올바르지 않는 값 입니다.");
+		return;
+	}
+
+	for(var i=0; i<browser.length; i++){
+		if(inputBrowser == browser[i].value){
+			browser[i].checked = true;
+		}
+	}
+		
+
+
+		
+	
+}
+
+</script>
 </head>
 <body>
 	
