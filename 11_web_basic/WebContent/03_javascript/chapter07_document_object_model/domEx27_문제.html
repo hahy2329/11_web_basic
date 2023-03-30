@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>연습예제</title>
+
 </head>
 <body>
 
@@ -15,14 +16,14 @@
 			  2019년 , 12월 , 7일    > 2019-12-07
 	 -->
 
-	<select id="year">
+	<select id="year" onchange="check()">
 		<option>2022</option>
 		<option>2021</option>
 		<option>2020</option>
 		<option>2019</option>
 		<option>2018</option>
 	</select> 년
-	<select id="month">
+	<select id="month" onchange="check()">
 		<option>1</option>
 		<option>2</option>
 		<option>3</option>
@@ -36,7 +37,7 @@
 		<option>11</option>
 		<option>12</option>
 	</select> 월
-	<select id="day">
+	<select id="day" onchange="check()">
 		<option>1</option>
 		<option>2</option>
 		<option>3</option>
@@ -59,7 +60,7 @@
 		<option>20</option>
 	</select> 일
 	 
-	<input type="button" value="확인" >
+	<input type="button" value="확인" onclick="check()" >
 
 </body>
 </html>
