@@ -4,32 +4,34 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script>
-function answer(){
 	
-	var inputBrowser = document.getElementById("inputBrowser").value;
+	function answer(){
+		var inputBrowser = document.getElementById("inputBrowser").value;
+		var browser = document.getElementsByName("browser");
+		var isChecked = false;
 
-	var browser = document.getElementsByClassName("browser");
-
-	var isExists = false;
-
-	for(var i=0; i<browser.length; i++){
-		if(browser[i].value == inputBrowser) isExists = true; 
-
-	}
-
-	if(!isExists){
-		alert("값이 존재하지 않습니다.");
-		return;
-	}
-
-	for(var i =0; i<browser.length; i++){
-		if(inputBrowser == browser[i].value){
-			browser[i].checked = true;
+		for(var i =0; i< browser.length; i++){
+			if(browser[i].value == inputBrowser){
+				isChecked = true;
+			}
 		}
+
+		if(isChecked){
+			for(var i = 0; i<browser.length; i++){
+				if(browser[i].value == inputBrowser){
+					browser[i].checked = true;
+				}
+			}
+		}
+
+		else{
+			alert("값이 존재하지 않습니다.");
+		}
+		
+
+		
+
 	}
-
-}
-
 </script>
 </head>
 <body>

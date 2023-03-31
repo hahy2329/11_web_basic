@@ -4,21 +4,20 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script>
-function answer(){
-	var products = document.getElementsByName("products");
 
-	var totalPrice = 0;
+	function answer(){
+		var products = document.getElementsByName("products");
+		var price = 0;
 
-	if(products[0].checked) totalPrice += Number(document.getElementById("keyboardPrice").innerHTML);
-	if(products[1].checked) totalPrice += Number(document.getElementById("mousePrice").innerHTML);
-	if(products[2].checked) totalPrice += Number(document.getElementById("padPrice").innerHTML);
+		if(products[0].checked) price += Number(document.getElementById("keyboardPrice").innerHTML);
+		if(products[1].checked) price += Number(document.getElementById("mousePrice").innerHTML);
+		if(products[2].checked) price += Number(document.getElementById("padPrice").innerHTML);
 
-	
 
-	document.getElementById("totalPrice").innerHTML = totalPrice;
 
-}
+		document.getElementById("totalPrice").innerHTML = price;
 
+	}	
 </script>
 </head>
 <body>

@@ -4,19 +4,35 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script>
-	function answer(){
-		var searchType = document.getElementById("searchType").value;
-		
-		var placeholderValue="";
-		
-		if(searchType == "goodsId") placeholderValue = "상품번호를 입력하세요.";
-		else if(searchType == "goodsTitle") placeholderValue ="상품이름을 입력하세요.";
-		else if(searchType == "goodsWriter") placeholderValue ="저자를 입력하세요.";
-		else if(searchType == "goodsPublisher") placeholderValue = "출판사를 입력하세요.";
-		
-		document.getElementById("searchword").placeholder = placeholderValue;
+
+var placeholder = "";
+function answer(){
+	var searchType = document.getElementById("searchType");
+	
+
+	if(searchType[0].selected){
+		document.getElementById("searchWord").value = placeholder;
+
+	}
+	else if(searchType[1].selected){
+		placeholder ="상품번호를 입력하세요.";
+		document.getElementById("searchWord").value = placeholder;
 		
 	}
+	else if(searchType[2].selected){
+		placeholder = "상품이름을 입력하세요.";
+		document.getElementById("searchWord").value = placeholder;
+	}
+	else if(searchType[3].selected){
+		placeholder = "저자를 입력하세요.";
+		document.getElementById("searchWord").value = placeholder;
+	}
+	else if(searchType[4].selected){
+		placeholder="출판사를 입력하세요.";
+		document.getElementById("searchWord").value = placeholder;
+	}
+	
+}
 </script>
 </head>
 <body>

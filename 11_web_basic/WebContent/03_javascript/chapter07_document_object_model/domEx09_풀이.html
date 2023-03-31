@@ -4,15 +4,13 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script>
-	
-	function answer(){	
-		
-		var orderQty = document.getElementById("orderQty").value;
-		var productPrice = document.getElementById("price").value;
-		document.getElementById("totalPrice").innerHTML = Number(productPrice) * Number(orderQty);
-	}
 
-	
+function answer(){
+	var price = document.getElementById("price").value;
+	var orderQty = document.getElementById("orderQty").value;
+	var totalPrice = Number(price) * Number(orderQty);
+	document.getElementById("totalPrice").innerHTML = totalPrice;
+}
 	
 </script>
 </head>

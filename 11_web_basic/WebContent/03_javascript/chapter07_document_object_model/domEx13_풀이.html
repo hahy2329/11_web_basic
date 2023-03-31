@@ -6,18 +6,15 @@
 <script>
 	function answer(){
 		var subjects = document.getElementsByName("subjects");
-		var count1 = "선택된 과목 : ";
-		
+		var view = "";
 
-		for(var i = 0; i<subjects.length; i++){
+		for(var i =0; i<subjects.length; i++){
 			if(subjects[i].checked){
-				count1 += subjects[i].value + " "; 
+				view += subjects[i].value + " ";
 			}
-
-		
 		}
-		document.getElementById("result").innerHTML = count1;
 
+		document.getElementById("result").innerHTML = view;
 	}
 </script>
 </head>

@@ -4,43 +4,48 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script>
-
+	
 	function setPayMethod(){
 		var payMethod = document.getElementsByName("payMethod");
-		var payMethod1 = "";
-
-		for(var i =0; i<payMethod.length; i++){
-			if(payMethod[i].checked){
-				payMethod1 = payMethod[i].value;
+		
+		var payMethodValue = "";
+		for (var i = 0; i < payMethod.length; i++) {
+			if (payMethod[i].checked) {
+				payMethodValue = payMethod[i].value;
 			}
 		}
 
 		var setView = "";
-		if(payMethod1 =="phone"){
-			 setView +="핸드폰 번호 : ";
-			 setView +="<select>";
-			 setView +="<option>010</option>";
-			 setView +="<option>011</option>";
-			 setView +="<option>017</option>";
-			 setView +="</select> - " ;
-			 setView +="<input type='text' size='10'> - ";
-			 setView +="<input type='text' size='10'>";
 
+		if(payMethodValue == "card"){
+			
+			setView +="카드번호 : ";
+			setView +="<input type='text' size=15> - ";
+			setView +="<input type='text' size=15> - ";
+			setView +="<input type='text' size=15> - ";
+			setView +="<input type='text' size=15>";
+			
 		}
-		
+		if(payMethodValue == "phone"){
+			
+			setView +="휴대폰 번호 : ";
+			setView +="<select>";
+			setView +="<option>010</option>";
+			setView +="<option>011</option>";
+			setView += "<option>017</option>";
+			setView +="<option>018</option>";
+			setView +="</select> - ";
+			setView +="<input type='text' size=15> - ";
+			setView +="<input type='text' size=15>";
 
-		else{
+			
 
-			setView += "카드번호 : ";
-			setView +="<input type='text' size='10'> ";
-			setView +="<input type='text' size='10'> ";
-			setView +="<input type='text' size='10'> ";
-			setView +="<input type='text' size='10'> ";
 		}
 
 		document.getElementById("target").innerHTML = setView;
-	}
+		
 
+	}
 </script>
 </head>
 <body>
