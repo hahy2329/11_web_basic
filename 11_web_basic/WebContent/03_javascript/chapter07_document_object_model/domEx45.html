@@ -38,7 +38,7 @@
 		var gender = document.f.gender;
 		if(gender.value == ""){
 			alert("성별을 선택하세요.");
-			gender.focus();
+			gender[0].focus();
 			return false;
 		}
 
@@ -60,7 +60,7 @@
 		*/	
 		if(!isChecked){  // 여러개 택해라!  
 			alert("취미를 1개이상 선택하세요.");
-			hobbies.focus();
+			hobbies[0].focus();
 			return false; // 전송 못되게 막음
 		}
 
