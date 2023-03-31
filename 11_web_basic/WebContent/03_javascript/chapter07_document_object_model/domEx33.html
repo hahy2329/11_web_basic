@@ -66,11 +66,25 @@
 	function addText() {
 		
 		// [필수] createTextNode("텍스트") 메서드를 이용하여 새로운 텍스트를 생성한다.
+
+
+		var addP = document.createElement("p");
+		var addText = document.createTextNode("동적으로 텍스트가 추가됩니다.");
+
+
+
 	
 		// [옵션] 노드에 속성을 부여한다.
-		
+
+		addP.style.color = "red";
+
+
 		// [필수] 부모의 노드를 찾아서 appendChild(노드) 메서드를 이용하여 새로운 노드를 연결한다.
-		
+		addP.appendChild(addText);
+		document.getElementById("target2").appendChild(addP);
+
+
+
 	}
 	
 	
@@ -78,7 +92,13 @@
 		
 		// 삭제하고 싶은 노드의 부모를 선택한다.
 		
+		var pNode = document.getElementById("target2");
+
 		// 전체 노드 삭제 예시
+		for(var i = pNode.childNodes.length -1; i>=0; i--){
+			pNode.removeChild(pNode.childNodes[i]);
+		}
+
 		
 	}
 	
