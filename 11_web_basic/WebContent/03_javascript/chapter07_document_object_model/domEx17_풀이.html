@@ -5,18 +5,19 @@
 <title>연습예제</title>
 <script>
 	
+function changeRadio(brand){
 
-	function changeRadio(brand){
-		if(brand == 'apple'){
-			document.getElementsByName("brand")[0].checked = true;
-			document.getElementById("showMsg").innerHTML = "apple이 선택되었습니다.";
-
-		}
-		else if(brand == 'microsoft'){
-			document.getElementsByName("brand")[1].checked = true;
-			document.getElementById("showMsg").innerHTML = "microsoft가 선택되었습니다.";
-		}
+	if(brand == 'apple'){
+		document.getElementsByName("brand")[0].checked = true;
+		document.getElementById("showMsg").innerHTML = "apple이 선택되었습니다.";
 	}
+
+	if(brand == 'microsoft'){
+		document.getElementsByName("brand")[1].checked = true;
+		document.getElementById("showMsg").innerHTML = "microsoft가 선택되었습니다.";
+	}
+}
+	
 
 </script>
 </head>

@@ -4,30 +4,29 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script>
-function change(comeIn){
-	var setView = "";
-	if(comeIn == "phone"){
-		
-		setView+="휴대폰 번호 : ";
-		setView+="<select>";
-		setView+="<option value='010'>010</option>";
-		setView+="<option value='011'>011</option>";
-		setView+="<option value='017'>017</option>";
-		setView+="<option value='018'>018</option>";
-		setView+="</select> - ";
-		setView+="<input type='text' size='15'> - ";
-		setView+="<input type='text' size='15>";			
-	}
-	else{
-		setView+="카드 번호 : ";
-		setView +="<input type='text' size='15'> - ";
-		setView +="<input type='text' size='15'> - ";
-		setView +="<input type='text' size='15'> - ";
-		setView +="<input type='text' size='15'>";
-	}
+	function change(payMethod){
+		var target = "";
+		if(payMethod == "phone"){
+			target ="휴대폰 번호 : ";
+			target += "<select>";
+			target +="<option>010</option>";
+			target +="<option>011</option>";
+			target +="</select> - ";
+			target +="<input type='text' size=15> - ";
+			target +="<input type='text' size=15>";
 
-	document.getElementById("target").innerHTML = setView;
-}
+		}
+
+		else{
+			target ="카드 번호 : ";
+			target +="<input type='text' size=15> - ";
+			target +="<input type='text' size=15> - ";
+			target +="<input type='text' size=15> - ";
+			target +="<input type='text' size=15>";
+		}
+
+		document.getElementById("target").innerHTML = target;
+	}
 </script>
 </head>
 <body>
