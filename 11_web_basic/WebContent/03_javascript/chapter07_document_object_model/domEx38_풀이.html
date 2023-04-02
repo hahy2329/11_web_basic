@@ -4,16 +4,46 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script>
-var fileCnt= 1;
+	
+	var fileCnt = 1;
+	function appendFile(){
 
-function appendFile(){
-	fileCnt ++;
+		fileCnt ++;
 
-	var 
-}
+		var addP = document.createElement("p");
+		var addFile = document.createElement("input");
+		addFile.type = "file";
+		addFile.name ="file" + fileCnt;
+
+		var addModifyBtn = document.createElement("input");
+		addModifyBtn.type = "button";
+		addModifyBtn.value ="수정";
+
+
+		var addDeleteBtn = document.createElement("input");
+		addDeleteBtn.type = "button";
+		addDeleteBtn.value = "삭제";
+
+		addP.appendChild(addFile);
+		addP.appendChild(addModifyBtn);
+		addP.appendChild(addDeleteBtn);
+
+		document.getElementById("fileList").appendChild(addP);
+
+	}
+
+	function removeFile(){
+
+		if(fileCnt ==1) return;
+
+		var parentNode = document.getElementById("fileList");
+		parentNode.removeChild(parentNode.lastChild);
+		
+		fileCnt--;
+	}
 
 </script>
-</head>
+</head>\
 
 <body>
 
