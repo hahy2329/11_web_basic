@@ -4,20 +4,25 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script>
-	var totalPrice = 0;
-	function check(method){
-		if(method =='keyboard'){
-			totalPrice += Number(document.getElementById("keyboardPrice").innerHTML);
+
+	function check(){
+	var price = 0;
+	var products = document.getElementsByName("products");
+	 
+
+	
+		if(products[0].checked){
+			price += Number(document.getElementById("keyboardPrice").innerHTML);
 		}
-		if(method == 'mouse'){
-			totalPrice += Number(document.getElementById("mousePrice").innerHTML);
-		}
-		if(method =='pad'){
-			totalPrice += Number(document.getElementById("padPrice").innerHTML);
+		if(products[1].checked){
+			price += Number(document.getElementById("mousePrice").innerHTML);
 		}
 
+		if(products[2].checked){
+			price += Number(document.getElementById("padPrice").innerHTML);
+		}
 
-		document.getElementById("totalPrice").innerHTML = totalPrice;
+		document.getElementById("totalPrice").innerHTML = price;
 	}
 </script>
 </head>
@@ -43,17 +48,17 @@
     		<th>가격</th>
     	</tr>
     	<tr height="40" align="center">
-    		<td><input type="checkbox" name="products" onchange="check('keyboard')"></td>
+    		<td><input type="checkbox" name="products" onchange="check()"></td>
     		<td>기계식 키보드</td>
     		<td><span id="keyboardPrice">35000</span>원</td>
     	</tr>
     	<tr height="40" align="center">
-    		<td><input type="checkbox" name="products" onchange="check('mouse')"></td>
+    		<td><input type="checkbox" name="products" onchange="check()"></td>
     		<td>무소음 마우스</td>
     		<td><span id="mousePrice">28000</span>원</td>
     	</tr>
     	<tr height="40" align="center">
-    		<td><input type="checkbox" name="products" onchange="check('pad')"></td>
+    		<td><input type="checkbox" name="products" onchange="check()"></td>
     		<td>장패드</td>
     		<td><span id="padPrice">10000</span>원</td>
     	</tr>

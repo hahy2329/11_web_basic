@@ -6,31 +6,29 @@
 <script>
 	var toggle = false;
 	function checkPwdLength(){
-
 		var pwd = document.getElementById("pwd");
 
 		if(pwd.value.length < 8 && !toggle){
 
 			var p = document.createElement("p");
-			var span = document.createElement("span");
-			var text = document.createTextNode("비밀번호는 8자리 이상으로 작성하세요.");
+			var span = document.createElement("sapn");
+			var text = document.createTextNode("비밀번호는 8자리 이상으로 작성하세요. ");
 
-			span.style= "color:red";
+			span.style = "color:red";
 			p.appendChild(span);
 			span.appendChild(text);
 			document.getElementById("target").appendChild(p);
 
-			toggle =true;
+			toggle= true;
 		}
 
 		if(pwd.value.length >=8 && toggle){
-
 			var target = document.getElementById("target");
-
 			target.removeChild(target.lastChild);
 
-			toggle =false;
+			toggle = false;
 		}
+
 	}
 </script>
 </head>

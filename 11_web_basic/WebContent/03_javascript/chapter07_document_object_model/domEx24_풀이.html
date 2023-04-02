@@ -4,42 +4,28 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script>
+function getTotalPrice(){
+	var products = document.getElementsByName("products");
 
-	function getTotalPrice(){
+	var keyboardQty = document.getElementById("keyboardQty").value;
+	var mouseQty = document.getElementById("mouseQty").value;
+	var padQty = document.getElementById("padQty").value;
+	var price = 0;
 
-		var products = document.getElementsByName("products");
-
-		var totalPrice = 0;
-
-		var keyboardPrice = 0;
-		var mousePrice = 0;
-		var padPrice = 0;
-
-		if(products[0].checked){
-			keyboardPrice = Number(document.getElementById("keyboardPrice").innerHTML);
-			var keyboardQty = document.getElementById("keyboardQty").value;
-			keyboardPrice *=keyboardQty;
-
-		}
-
-		if(products[1].checked){
-
-			mousePrice = Number(document.getElementById("mousePrice").innerHTML)
-			var mouseQty = document.getElementById("mouseQty").value;
-			mousePrice *= mouseQty;
-		}
-
-		
-		if(products[2].checked){
-
-		padPrice = Number(document.getElementById("padPrice").innerHTML)
-		var padQty = document.getElementById("padQty").value;
-		padPrice *= padQty;
-		}
-
-		document.getElementById("totalPrice").innerHTML = keyboardPrice + mousePrice + padPrice;
-
+	if(products[0].checked) {
+		price += Number(document.getElementById("keyboardPrice").innerHTML) * keyboardQty;
 	}
+
+	if(products[1].checked){
+		price += Number(document.getElementById("mousePrice").innerHTML) * mouseQty;
+ 	}
+
+	if(products[2].checked){
+		price += Number(document.getElementById("padPrice").innerHTML) * padQty;
+	}
+
+	document.getElementById("totalPrice").innerHTML = price;
+}
 
 </script>
 </head>

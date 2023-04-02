@@ -5,8 +5,8 @@
 <title>연습예제</title>
 <script>
 	var toggle = true;
-
 	function makeReasonBuy(reason){
+
 		if(reason == "etc" && toggle == true){
 
 			var aInput = document.createElement("input");
@@ -14,19 +14,15 @@
 			aInput.size = "50";
 			aInput.placeholder = "이유를 적어주세요.";
 			document.getElementById("target").appendChild(aInput);
-			toggle=false;
+			toggle = false;
 		}
 
-		else if(reason !="etc" && toggle == false){
-
+		else if(reason != "etc" && toggle==false){
 			var node = document.getElementById("target");
-
 			node.removeChild(node.lastChild);
 			toggle = true;
-
 		}
 	}
-
 </script>
 </head>
 <body>

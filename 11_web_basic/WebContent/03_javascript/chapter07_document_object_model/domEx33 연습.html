@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>새로운 노드 추가 및 삭제</title>
+<script>
+
+	var imageIdx = 1;
+	function addElement(){
+		var addImg = document.createElement("img");
+
+		addImg.src = "./images/pic_" + imageIdx + ".jpg";
+		addImg.width = "100";
+		addImg.height = "100";
+
+
+		document.getElementById("target1").appendChild(addImg);
+		imageIdx ++;
+		if(imageIdx == 10) imageIdx = 1;
+	}
+	function removeElement(){
+		var pNode = document.getElementById("target1");
+
+		pNode.removeChild(pNode.lastChild);
+
+		imageIdx--;
+	}
+	function addText(){
+
+		var addP  = document.createElement("p");
+		var addText = document.createTextNode("동적으로 텍스트가 생성됩니다.");
+
+		addP.style.color = "red";
+		addP.appendChild(addText);
+		document.getElementById("target2").appendChild(addP);
+	}
+
+	function removeText(){
+
+		var pNode = document.getElementById("target2");
+
+		for(var i = pNode.childNodes.length -1; i>=0; i--){
+			pNode.removeChild(pNode.childNodes[i]);
+		}
+	}
+
+
+</script>
+</head>
+<body>
+
+	<h2>첫번째 단락</h2>
+	<div id="target1"></div>
+	
+	<h2>두번째 단락</h2>
+	<div id="target2"></div>
+	
+	<button onclick="addElement()">엘리먼트 추가</button>
+	<button onclick="removeElement()">엘리먼트 삭제</button>
+	<button onclick="addText()">텍스트 추가</button>
+	<button onclick="removeText()">텍스트 삭제</button>
+	
+</body>
+</html>

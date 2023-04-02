@@ -4,7 +4,21 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script>
+function checkPwdLength(){
+	var password = document.getElementById("pwd").value;
 
+	if(password.length <8){
+		document.getElementById("passwdMsg").style.color = "red";
+		document.getElementById("passwdMsg").innerHTML = "비밀번호는 8자리 이상으로 작성하세요";
+
+	}
+	else{
+		document.getElementById("passwdMsg").style.color ="green";
+		document.getElementById("passwdMsg").innerHTML = "확인되었습니다.";
+	}
+	
+
+}
 </script>
 </head>
 <body>

@@ -4,19 +4,14 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script>
+
 	function check(method){
-		var money = "";
-
-		if(method=='rocket'){
-			money+="무료";
+		if(method == 'rocket'){
+			document.getElementById("deliveryPrice").innerHTML = "무료";
 		}
-
-		if(method == 'basic'){
-			money+="3000원";
+		if(method == "basic"){
+			document.getElementById("deliveryPrice").innerHTML = "3,000원";
 		}
-
-		document.getElementById("deliveryPrice").innerHTML = money;
-
 	}
 </script>
 </head>

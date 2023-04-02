@@ -4,17 +4,14 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script>
+	function textType(){
+		var reasonBuy = document.getElementsByName("reasonBuy");
 
-function textType(type){
-	var message = "";
-	if(type == 'basic'){
+		if(reasonBuy[2].checked){
+			document.getElementById("etcDetail").innerHTML = "<input type='text' size=50 placeholder='이유를 적어주세요.'>";
+		}
 		
-		message = "<input type='text' size='50' placeholder='이유를 적어주세요.'>";
 	}
-	document.getElementById("etcDetail").innerHTML = message;
-
-}
-
 </script>
 </head>
 <body>

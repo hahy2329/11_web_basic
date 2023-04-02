@@ -4,19 +4,17 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script>
-
 	function check(){
-		
+		var checkAll = document.getElementsByName("checkAll");
 
 		if(document.getElementsByName("checkAll")[0].checked){
-
-			document.getElementsByName("agree1")[0].checked =true;
+			document.getElementsByName("agree1")[0].checked = true;
 			document.getElementsByName("agree2")[0].checked = true;
 			document.getElementsByName("agree3")[0].checked = true;
 		}
 
-		else{
-			document.getElementsByName("agree1")[0].checked =false;
+		else {
+			document.getElementsByName("agree1")[0].checked = false;
 			document.getElementsByName("agree2")[0].checked = false;
 			document.getElementsByName("agree3")[0].checked = false;
 		}
