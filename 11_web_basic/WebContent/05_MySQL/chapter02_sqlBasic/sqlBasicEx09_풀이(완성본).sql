@@ -258,22 +258,56 @@ WHERE FIRST_NAME LIKE '%o%';
 
 	
 # 30) 이름에 'o'가 포함되어 있고 마지막글자가 'o'가 아닌 사원의 사원번호 , 이름을 조회하기.(EMPLOYEES)
-        
+
+SELECT EMP_NO, FIRST_NAME
+FROM EMPLOYEES
+WHERE FIRST_NAME LIKE '%o%' AND NOT FIRST_NAME LIKE '%o';
+
+
         
 # 31) 사원 번호와 입사일을 조회하기 (입사일이 빠른 사람 순서) (EMPLOYEES)
+
+SELECT EMP_NO, HIRE_DATE
+FROM EMPLOYEES
+ORDER BY HIRE_DATE; 
 
 
 # 32) first_name이 k로 시작하는 사원의 사원번호와 이름(성,이름)을 조회하기. (알파벳 순서 기준) (EMPLOYEES)
 
+SELECT EMP_NO, FIRST_NAME, LAST_NAME
+FROM EMPLOYEES
+WHERE FIRST_NAME LIKE 'k%'
+ORDER BY LAST_NAME;
+
+
 
 # 33) 1990년에 입사한 사원 번호와 입사일을 조회하기. (입사일이 늦은 기준 순서) (EMPLOYEES) 
+SELECT EMP_NO, HIRE_DATE
+FROM EMPLOYEES
+WHERE HIRE_DATE BETWEEN '1990-01-01' AND '1990-12-31'
+ORDER BY HIRE_DATE DESC;
+
 
 
 # 34) 이름의 첫글자가 A로 시작하는 사원의 사원번호 , 이름을 조회하기. (EMPLOYEES)
 
+SELECT EMP_NO, FIRST_NAME, LAST_NAME
+FROM EMPLOYEES
+WHERE FIRST_NAME LIKE'A%';
+
+
 
 # 35) 이름의 마지막 글자가 s로 끝나는 사원의 사원번호 , 이름을 조회하기. (EMPLOYEES)
   
+  SELECT EMP_NO, FIRST_NAME, LAST_NAME
+  FROM EMPLOYEES
+  WHERE LAST_NAME LIKE '%s';
+  
+  
 
 # 36) 사원의 번호와 이름(성,이름)을 조회하기. (성,이름 모두 알파벳 순서) (EMPLOYEES)
+
+SELECT EMP_NO, FIRST_NAME, LAST_NAME
+FROM EMPLOYEES
+ORDER BY FIRST_NAME, LAST_NAME;
 
