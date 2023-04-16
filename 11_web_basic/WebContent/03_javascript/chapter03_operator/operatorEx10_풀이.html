@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연습예시</title>
+<script>
+
+	//문제1) 월급이 100원이다. 연봉은? (조건 : 세금 10% 제외)
+
+	var num = 100;
+	var year = 100*12;
+
+	var tax = year/10;
+	year -= tax;
+	console.log("연봉 : " + year + "원 입니다.");
+	
+	//문제2) 시험점수를 30, 50, 4점 을 받았다. 평균은?
+
+	var sub1 = 30;
+	var sub2 = 50;
+	var sub3 = 4;
+
+	var avg = (sub1 + sub2 + sub3) /3;
+	console.log("평균 : " + avg);
+
+
+
+
+	
+	//문제3) 가로가 3이고 세로가 6인 삼각형 넓이 출력
+
+	var garo = 3;
+	var sero = 6;
+	var width = garo * sero / 2;
+
+	console.log("삼각형의 넓이 :" + width);
+
+	
+	//문제4) 100초를 1분 40초로 출력
+
+	var time = 100;
+	var minute = parseInt(100 /60);
+	var seconds = 100 % 60;
+
+	console.log("100초 : " + minute+"분 " + seconds + "초 입니다.");
+
+	
+	//문제5) 800원에서 500원짜리 개수 , 100원짜리 개수 출력
+	//정답5) 500원의 개수 = 1개 
+	//       100원의 개수 = 3개 
+
+	var all = 800;
+	var div = parseInt(800 / 500);
+	var mod = (800%500)/100;
+
+	console.log("800원의 500원짜리 개수 : " + div+"개 100원의 개수 : " + mod + "개 입니다.");
+
+
+
+
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
