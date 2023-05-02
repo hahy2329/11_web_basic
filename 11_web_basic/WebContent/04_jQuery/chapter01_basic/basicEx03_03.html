@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>document.ready함수를 생성하는 방법</title>
+<script src="js/jquery-3.6.4.min.js"></script>
+<script>
+	
+	//방법1)
+	jQuery(document).ready(function){
+		$("body").css("background","silver");
+		
+	});
+	
+	//방법2)	
+	$(document).ready(function){
+		$("body").css("background","gold");
+		
+	});
+	
+	//방법3)
+	$().ready(function(){
+		$("body").css("background", "yellow");
+		
+	});
+
+	
+	
+	//방법4
+	$(function(){
+		$("body").css("background", "pink")
+		
+	});
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>
