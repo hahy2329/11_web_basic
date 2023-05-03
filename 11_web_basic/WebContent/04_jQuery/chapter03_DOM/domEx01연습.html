@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>text() , html()</title>
+<script src="../js/jquery-3.6.1.min.js"></script>
+<script>
+	$(function(){
+		
+		$("button1").click(function(){
+			
+			console.log($("#price").text());
+			
+		});
+		
+		var qty = 1;
+		$("#button2").click(function(){
+			
+			qty++;
+			$("#price").text(30000*qty);
+			
+		});
+		
+		$("#button3").click(function(){
+			console.log($("#method").html());
+			
+		});
+		
+		var toggle= true;
+		
+		$("#button4").click(function(){
+			
+			var method="";
+			
+			if(toggle){
+				var method="<input type='text' size='10'> - ";
+				method +="<input type='text' size='10'> - ";
+				method +="<input type='text' size='10'> - ";
+				method +="<input type='text' size='10'>";
+				
+				toggle = false;
+				
+			}
+			else{
+				var method = "<select>";
+				method += "<option>010</option>";
+				method += "<option>011</option>";
+				method += "<option>017</option>";
+				method += "</select> - ";
+			    method += "<input type='text' size='10'> - ";
+			    method += "<input type='text' size='10'>";
+			    
+			    toggle=true
+				
+				
+			}
+			$("#method").html(method);
+			
+		});
+		
+		
+	});
+	
+
+</script>
+</head>
+<body>
+	<p>가격 : <span id="price">30000</span>원</p>
+	
+	<div id="method">
+	
+	</div>
+	
+	<hr>
+	
+	<button id="button1">text getter</button>
+	<button id="button2">text setter</button>
+	<button id="button3">html getter</button>
+	<button id="button4">html setter</button>
+   	
+</body>
+</html>
