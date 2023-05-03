@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title src="../js/jquery-3.6.1.min.js">속성 선택자</title>
+<title>속성 선택자</title>
+<script src="../js/jquery-3.6.1.min.js"></script>
 <script>
 	
 	/*
@@ -26,9 +27,13 @@
 	// $("p").css("color", "red");
 	 $().ready(function(){
 		 
-		 $("p").css("color", "red");
-		 
+		 $("[type='text']").css("background", "gold");
+		 $("[name='pwd']").css("background","silver");
+		 $("[name='skillSelect']").css("background","pink");
+		 $("[rows='10']").css("background","purple");
+		 $("[href='naver']").css("color","red");
 	 });
+	 
 </script>
 </head>
 <body>
