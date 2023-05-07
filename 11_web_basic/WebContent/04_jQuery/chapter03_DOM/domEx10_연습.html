@@ -4,36 +4,38 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script src="../js/jquery-3.6.1.min.js"></script>
+
 <script>
-	
-	
 	$(function(){
 		
 		$("#searchType").change(function(){
 			
 			var search = $("#searchType").val();
+			var placeholder = "";
 			
-		
-			var placeholderValue="";
-			
-			if(search == "goodsId")	placeholderValue="상품번호를 입력하세요"; 
-			else if(search == "goodsTitle")	placeholderValue="상품이름을 입력하세요";
-			else if(search == "goodsWriter") placeholderValue="저자를 입력하세요";
-			else if(search == "goodsPublisher") placeholderValue="출판사를 입력하세요";
-
-			$("#searchWord").prop("placeholder" , placeholderValue);
-			
-			
+			if(search== "all"){
+				placeholder="";
+				
+			}
+			else if(search=="goodsId"){
+				placeholder="상품번호를 입력하세요.";
+			}
+			else if(search=="goodsTitle"){
+				placeholder = "상품이름을 입력하세요.";
+			}
+			else if(search=="goodsWriter"){
+				placeholder="저자를 입력하세요.";
+			}
+			else if(search=="goodsPublisher"){
+				placeholder="출판사를 입력하세요.";
+			}
+			$("#searchWord").prop("placeholder", placeholder);
 			
 		});
-		
 		
 	});
 
 </script>
-
-
-
 </head>
 <body>
 	
@@ -48,10 +50,6 @@
 		5) 출판사를 선택하면   '출판사를 입력하세요' 표시
 		
 	 -->
-	 
-	 
-	 
-	 
 
     <p>
         <select id="searchType">

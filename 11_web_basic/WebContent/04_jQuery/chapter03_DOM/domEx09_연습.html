@@ -3,28 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>연습예제</title>
-
 <script src="../js/jquery-3.6.1.min.js"></script>
 
 <script>
-	$().ready(function(){
+	$(function(){
 		
-		
-		$("#grade").change(function(){
-			
+		$("#grade").change(function(){	
 			var grade = $("#grade").val();
 			
-			
-			
-			$("#choiceGrade").val(grade)
+			$("#choiceGrade").val(grade);
 			$("#choiceGrade").prop("disabled", true);
-			$("#choiceGradeLabel").text("선택된 학년 ");
-			
-			
-			
-		});
+			$("#choiceGradeLabel").text("선택된 학년");
 		
 		
+		});	
 	});
 
 </script>
@@ -42,10 +34,6 @@
 		스크립트를 작성해보시오.
 		
 	 -->
-	 
-	
-	 
-	 
 
     <p>
         학년 : 
