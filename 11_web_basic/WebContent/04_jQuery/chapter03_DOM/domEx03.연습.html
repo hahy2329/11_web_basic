@@ -18,9 +18,11 @@
 			- 백엔드 개발에서 attr()보다 대부분의 기능에서 prop()사용을 권장한다.
 	
 	*/
+	
 	$(function(){
 		
 		$("#button1").click(function(){
+			
 			console.log($("#imageTarget").prop("src"));
 			
 		});
@@ -28,18 +30,18 @@
 		$("#button2").click(function(){
 			
 			console.log($("#imageTarget").prop("width"));
-			
-		})
+		});
 		
-		var idx=1;
+		var idx = 1;
 		$("#button3").click(function(){
-			idx++;
+			idx ++;
+			
 			$("#imageTarget").prop("src", "../images/pic_" + idx +".jpg");
 			
 			
-			
-			if(idx ==9) idx = 0;
+			if(idx == 9) idx=0;
 		});
+		
 		
 		$("#button4").click(function(){
 			
@@ -47,15 +49,13 @@
 			var height = $("#imageTarget").prop("height");
 			
 			width += 30;
-			height +=30;
+			height += 30;
 			
-			$("#imageTarget").prop("width",width);
+			
+			$("#imageTarget").prop("width", width);
 			$("#imageTarget").prop("height", height);
 			
-			
-		});
-		
-		
+		})
 	});
 	
 	
@@ -63,13 +63,13 @@
 </script>
 </head>
 <body>
-    <img src="../images/pic_1.jpg" id="imageTarget" width="400" height="400">
+    
+ 	<img src="../images/pic_1.jpg" id="imageTarget" width="400" height="400">
  	<hr>
 	<button id="button1">속성 확인하기1</button>
 	<button id="button2">속성 확인하기2</button>
 	<button id="button3">속성 변경하기1</button>
 	<button id="button4">속성 변경하기2</button>
-
 	
     
 </body>

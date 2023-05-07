@@ -36,79 +36,76 @@
 	
 	     */
 
-		
-	     $(function(){
-	    	
-	    	 $("#btnClick").click(function(){
-	    		$("#target").prop("src", "../images/programmer.png"); 
-	    		 
-	    		 
-	    	 });
-	    	 
-	    	 $("#btnDblClick").click(function(){
-	    		
-	    		 $("#target").prop("src","../images/spring.PNG");
-	    		 
-	    	 });
-	    	 
-	    	 
-	    	$("#focusBlur").focus(function(){
-	    		$("#target").prop("src" , "../images/pic_1.jpg");
-	    	});
-	    	
-	    	$("#focusBlur").blur(function(){
-				$("#target").prop("src" , "../images/pic_2.jpg");
-			});
-	    	 
-	    	$("#keyboardDownUp").keydown(function(){
-				$("#target").prop("src" , "../images/pic_3.jpg");
-			});
-	    	
-	    	$("#keyboardDownUp").keyup(function(){
-				$("#target").prop("src" , "../images/pic_4.jpg");
-			});
-	    	
-	    	
-	    	
-	    	$("#mouseDownUp").mousedown(function(){
-				$("#target").prop("src" , "../images/pic_5.jpg");
-			});
-	    	
-	    	
-	    	$("#mouseDownUp").mouseup(function(){
-				$("#target").prop("src" , "../images/pic_6.jpg");
-			});
-	    	
-	    	$("#mouseEnterLeave").mouseenter(function(){
-	    		$("#target").prop("src","../images/pic_7.jpg");
-	    		
-	    	});
-	    	
-	    	$("#mouseEnterLeave").mouseleave(function(){
-				$("#target").prop("src" , "../images/pic_8.jpg");
-			});
-	    	
-	    	var toggle = true;
-			$("[name='c'] , [name='r'] , #s").change(function(){
-				
-				if (toggle) {
-					$("#target").prop("src" , "../images/americano.jpg");
-					toggle = false;
-				}
-				else {
-					$("#target").prop("src","../images/coffee.gif");
-					toggle = true;
-				}
-				
-			});
+	$(function(){
+		$("#btnClick").click(function(){
 			
-	    	
-	    	
-	    	 
-	     });
-	     
-	     
-	     
+			$("#target").prop("src", "../images/programmer.png");
+			
+		});
+		
+		$("#btnDblClick").dblclick(function(){
+			
+			$("#target").prop("src", "../images/spring.PNG");
+			
+		});
+		
+		$("#focusBlur").focus(function(){
+			
+			$("#target").prop("src", "../images/pic_1.jpg");
+			
+		});
+	
+		$("#focusBlur").blur(function(){
+			$("#target").prop("src" , "../images/pic_2.jpg");
+		});
+		
+		
+		$("#keyboardDownUp").keydown(function(){
+			
+			$("#target").prop("src","../images/pic_3.jpg");
+			
+		});
+		
+		$("#keyboardDownUp").keyup(function(){
+			
+			$("#target").prop("src" , "../images/pic_4.jpg");
+			
+		});
+		$("#mouseDownUp").mousedown(function(){
+			$("#target").prop("src" , "../images/pic_5.jpg");
+		});
+		
+		$("#mouseDownUp").mouseup(function(){
+			$("#target").prop("src" , "../images/pic_6.jpg");
+		});
+		
+		$("#mouseEnterLeave").mouseenter(function(){
+			$("#target").prop("src" , "../images/pic_7.jpg");
+		});
+		
+		$("#mouseEnterLeave").mouseleave(function(){
+			$("#target").prop("src" , "../images/pic_8.jpg");
+		});
+		
+		
+		var toggle = true;
+		$("[name='c'], [name='r'], #s").change(function(){
+			
+			if(toggle){
+				$("#target").prop("src","../images/americano.jpg");
+				toggle=false;
+			}
+			else{
+				
+				$("#target").prop("src","../images/coffee.gif" );
+				toggle=true;
+			}
+			
+		});
+		
+		
+	});
+		
 </script>
 </head>
 <body>
