@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script src="../js/jquery-3.6.1.min.js"></script>
+
 <script>
-	
 	$(function(){
 		
 		$("[name='payMethod']").change(function(){
@@ -13,40 +13,34 @@
 			var payMethodValue = $("[name='payMethod']:checked").val();
 			var setView = "";
 			
-			
+			if(payMethodValue ==  "phone"){
 				
-				
-				if(payMethodValue == "phone"){
-					setView = "핸드폰번호 : ";
-					setView +="<select>";
-					setView +="<option value='010'>010</option>";
-					setView +="<option value='017'>017</option>";
-					setView +="<option value='018'>018</option>";
-					setView += "<option value='019'>019</option>";
-					setView += "</select> - " 
-					setView += "<input type='text' size='10'> - "; 
-					setView += "<input type='text' size='10'>"; 
-					setView += "</select>"
-				}
-				else{
-					setView = "카드번호 : <input type='text' size='10'> - ";
-					setView += "<input type='text' size='10'> - ";
-					setView += "<input type='text' size='10'> -";
-					setView +="<input type='text' size='10'>";
-					
-					
-				}
-				
-				$("#target").html(setView);
+				setView = "핸드폰 번호 : ";
+				setView +="<select>";
+				setView +="<option value='010'>010</option>";
+				setView += "<option value='017'>017</option>";
+				setView += "<option value='018'>018</option>";
+				setView += "<option value='019'>019</option>";
+				setView += "</select> - ";
+				setView +="<input type='text' size='10'> - ";
+				setView +="<input type='text' size='10'>";
+				setView +="</select>";
+			}
+			else {
+				setView = "카드번호 : <input type='text' size='10'> ";
+				setView += "<input type='text' size='10'> ";
+				setView += "<input type='text' size='10'> ";
+				setView += "<input type='text' size='10'> ";
+			}
 			
-			
+			$("#target").html(setView);
 			
 		});
+		
 		
 	});
 
 </script>
-
 </head>
 <body>
 

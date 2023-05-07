@@ -4,43 +4,33 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script src="../js/jquery-3.6.1.min.js"></script>
-
 <script>
 	$(function(){
 		
 		$("[name='search']").change(function(){
 			
-			var keyword = $("[name='search']:checked").val();
+			var search = $("[name='search']:checked").val();
 			
-			if(keyword =='detail'){
+			if(search='detail'){
+				
 				$("#category").prop("disabled",false);
 				$("#keyword").prop("disabled",false);
 				$("#today").prop("disabled",false);
 				$("#1week").prop("disabled",false);
 				$("#1month").prop("disabled",false);
-				
-				
 			}
-			
 			else{
-				
 				$("#category").prop("disabled",true);
 				$("#keyword").prop("disabled",true);
 				$("#today").prop("disabled",true);
 				$("#1week").prop("disabled",true);
 				$("#1month").prop("disabled",true);
-				
-				
 			}
-			
-			
 			
 		});
 		
-		
-		
 	});
-	
+
 </script>
 </head>
 <body>
