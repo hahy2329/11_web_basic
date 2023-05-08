@@ -3,30 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title>연습예제</title>
-<script src = "../js/jquery-3.6.1.min.js"></script>
+<script src="../js/jquery-3.6.1.min.js"></script>
+
 <script>
 	$(function(){
 		
 		$("[name='brand']").change(function(){
 			
-			var brandck = $("[name='brand']:checked").val();
+			var brand = $("[name='brand']:checked").val();
 			
-			if(brandck == "apple"){
-				
-				$("#brandImg").prop("src", "../images/pic_1.jpg");
+			if(brand=="apple"){
+				$("#brandImg").prop("src","../images/pic_1.jpg");
 			}
-			
-			else if(brandck == "microsoft"){
-				
+			else if(brand="microsoft"){
 				$("#brandImg").prop("src","../images/pic_3.jpg");
-				
-				
 			}
 			
 		});
 		
 		
 	});
+
 
 </script>
 </head>
