@@ -59,8 +59,9 @@
 			$.ajax({
 				url : "ajaxEx02",//action역할 어디로 보낼건지
 				type: "post", //method역할
-				data : param, //name역할
-				success : function(){
+				//data : "id = " + $("id").val() +"&isPC=" + true, //name역할
+				data : param, // 데이터를 보낼것(give)
+				success : function(){ //서버에서 처리 후 받는 곳(take)
 					var checkCnt = $("#checkCnt").text();
 					checkCnt++;
 					$("#checkCnt").text(checkCnt);

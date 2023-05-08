@@ -10,27 +10,34 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ajaxEx03")
-public class AjaxEx03 extends HttpServlet {
+@WebServlet("/ajaxEx05")
+public class AjaxEx05 extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-       
+     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dis = request.getRequestDispatcher("04_jQuery/chapter04_AJAX/ajaxEx03.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("04_jQuery/chapter04_AJAX/ajaxEx05.jsp");
 		dis.forward(request, response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		response.setContentType("text/html; charset=UTF-8");
-		PrintWriter out = response.getWriter();
+		request.setCharacterEncoding("utf-8");
 		
-		out.print("테스트");
+		String id = request.getParameter("id");
+		String passwd = request.getParameter("passwd");
 		
+		String isLogin = "false"; // 문자열만 넘어가기에 boolean 불가...
+		if(id.equals("admin") && passwd.equals("admin")) {
+			
+			isLogin = "true";
+			
+		}
 		
+		PrintWriter pw = response.getWriter();
+		pw.print(isLogin);
 		
 		
 	}
-	
-	
+
 }

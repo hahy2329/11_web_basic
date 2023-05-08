@@ -10,27 +10,34 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ajaxEx03")
-public class AjaxEx03 extends HttpServlet {
-	
+@WebServlet("/ajaxEx04")
+public class AjaxEx04 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dis = request.getRequestDispatcher("04_jQuery/chapter04_AJAX/ajaxEx03.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("04_jQuery/chapter04_AJAX/ajaxEx04.jsp");
 		dis.forward(request, response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		response.setContentType("text/html; charset=UTF-8");
+		request.setCharacterEncoding("utf-8");
+		
+		String id = request.getParameter("id");
+		
+		String[] userList = {"user1","user2","user3"};
+		
+		String isDuple = "N";
+		
+		for (int i = 0; i < userList.length; i++) {
+			if(userList[i].equals(id)) {
+				isDuple = "Y";
+			}
+		}
+		
 		PrintWriter out = response.getWriter();
+		out.print(isDuple);
 		
-		out.print("테스트");
-		
-		
-		
-		
+	
 	}
-	
-	
 }
