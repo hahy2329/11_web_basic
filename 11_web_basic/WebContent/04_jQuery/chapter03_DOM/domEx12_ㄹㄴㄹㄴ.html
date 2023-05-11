@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연습예제</title>
+<script src="../js/jquery-3.6.1.min.js"></script>
+
+<script>
+	
+	
+	$(function(){
+		
+		$("#memberId").blur(function(){
+			
+			$("#msg").html("<span style='color:red;'>뭐지???</span>");
+			
+			
+			
+		});
+		
+		
+	});
+		
+	
+
+</script>
+</head>
+<body>
+	
+
+<p>아이디 </p>
+ <input type="text" name="memberId" placeholder="아이디를 입력하세요." required="required">
+ <span id="msg"></span>
+	
+
+	
+</body>
+</html>
