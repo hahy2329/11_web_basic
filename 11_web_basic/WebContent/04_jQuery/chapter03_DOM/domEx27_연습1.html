@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 <script src="../js/jquery-3.6.1.min.js"></script>
-</head>
-
 <script>
 	$(function(){
 		
@@ -14,25 +12,28 @@
 			if($("[name='checkAll']").prop("checked")){
 				
 				$("[name='agree1']").prop("checked", true);
-				$("[name='agree2']").prop("checked",true);
-				$("[name='agree3']").prop("checked",true);
+				$("[name='agree2']").prop("checked", true);
+				$("[name='agree3']").prop("checked", true);
 				
-				
-			}
-			else{
-				$("[name='agree1']").prop("checked",false);
-				$("[name='agree2']").prop("checked",false);
-				$("[name='agree3']").prop("checked", false);
 			}
 			
+			else{
+				
+				$("[name='agree1']").prop("checked", false);
+				$("[name='agree2']").prop("checked", false);
+				$("[name='agree3']").prop("checked", false);
+				
+			}
 			
 		});
+		
 		
 		
 	});
 
 
 </script>
+</head>
 <body>
 
 	<!-- 
